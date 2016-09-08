@@ -18,7 +18,7 @@ var methods = [
 	'contact.getList', 'contact.add'
 ];
 
-function createApiClient (opts) {
+module.exports = function createApiClient (opts) {
 	assert(opts.privateKey, 'privateKey param is required');
 	assert(opts.apiKey, 'apiKey param is required');
 	assert(opts.account, 'account param is required');
