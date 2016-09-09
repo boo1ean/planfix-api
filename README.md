@@ -36,4 +36,4 @@ client.auth.login({
 		console.log(result.users.user); // list of first 100 users
 	});
 });
-```js
+```
