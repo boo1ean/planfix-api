@@ -1,11 +1,11 @@
 var _ = require('lodash');
 var debug = require('debug')('planfix-api');
-var crypto = require('crypto');
 var Promise = require('bluebird');
 var request = Promise.promisify(require('request'));
 var xml2js = Promise.promisifyAll(require('xml2js'));
 var js2xmlparser = require('js2xmlparser');
 var assert = require('assert');
+var md5 = require('md5');
 
 var BASE_URL = 'https://api.planfix.ru/xml/';
 var STATUS_OK = 'ok';
@@ -75,9 +75,7 @@ module.exports = function createApiClient (opts) {
 }
 
 function sign (methodName, params, key) {
-	return crypto.createHash('md5')
-		.update(methodName + implodeElements(params) + key)
-		.digest('hex');
+	return md5(methodName + implodeElements(params) + key);
 }
 
 function implodeElements(obj) {
