@@ -13,9 +13,11 @@ var STATUS_OK = 'ok';
 var methods = [
 	'auth.login',
 	'task.add',
+	'task.getList',
 	'user.getList',
 	'project.getList',
-	'contact.getList', 'contact.add'
+	'contact.getList', 
+	'contact.add'
 ];
 
 module.exports = function createApiClient (opts) {
