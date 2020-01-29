@@ -17,7 +17,9 @@ var methods = [
 	'user.getList',
 	'project.getList',
 	'contact.getList', 
-	'contact.add'
+	'contact.add',
+	'userGroup.get',
+	'userGroup.getList'
 ];
 
 module.exports = function createApiClient (opts) {
