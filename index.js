@@ -13,6 +13,8 @@ var STATUS_OK = 'ok';
 var methods = [
 	'auth.login',
 	'task.add',
+	'task.reject',
+	'task.changeStatus',
 	'user.getList',
 	'project.getList',
 	'contact.getList', 'contact.add'
