@@ -16,9 +16,10 @@ var methods = [
 	'task.reject',
 	'task.update',
 	'task.changeStatus',
+	'task.getList',
 	'user.getList',
 	'project.getList',
-	'contact.getList',
+	'contact.getList', 
 	'contact.add',
 	'userGroup.get',
 	'userGroup.getList'
